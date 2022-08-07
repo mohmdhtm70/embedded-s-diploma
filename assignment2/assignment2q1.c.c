@@ -1,44 +1,39 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<CodeBlocks_project_file>
-	<FileVersion major="1" minor="6" />
-	<Project>
-		<Option title="assignment3q1" />
-		<Option execution_dir="E:/assignment3q1/" />
-		<Option pch_mode="2" />
-		<Option compiler="gcc" />
-		<Build>
-			<Target title="Debug">
-				<Option output="bin/Debug/assignment3q1" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-				</Compiler>
-			</Target>
-			<Target title="Release">
-				<Option output="bin/Release/assignment3q1" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-O2" />
-				</Compiler>
-				<Linker>
-					<Add option="-s" />
-				</Linker>
-			</Target>
-		</Build>
-		<Compiler>
-			<Add option="-Wall" />
-		</Compiler>
-		<Unit filename="E:/assignment3q1/main.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Extensions>
-			<code_completion />
-			<envvars />
-			<debugger />
-		</Extensions>
-	</Project>
-</CodeBlocks_project_file>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float a[2][2],b[2][2],sum[2][2];
+    
+
+    printf("Enter elements of 1st matrix\n");
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++) {
+            printf("Enter a%d%d: ",i+1,j+1);
+            scanf("%f",&a[i][j]);
+        }
+    }
+
+
+    printf("Enter elements of 2nd matrix\n");
+    for(int i=0;i<2;i++){
+        for(int j=0;j<2;j++) {
+            printf("Enter a%d%d: ",i+1,j+1);
+            scanf("%f",&b[i][j]);
+        }
+    }
+    printf("\n");
+
+
+    printf("sum of matrix:\n");
+    for(int i=0;i<2;i++) {
+        for(int j=0;j<2;j++) {
+            sum[i][j] = a[i][j] + b[i][j];
+            printf("%.1f\t",sum[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+				
